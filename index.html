@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vaibhavi Kariya — Data Science & AI</title>
   <meta name="description" content="B.Tech CE Student | Data Science · ML · DL · Gen AI Enthusiast | AI Intern"/>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%2303060f'/><text x='50' y='68' font-family='Arial' font-size='42' font-weight='900' text-anchor='middle' fill='%2300cfaa'>VK</text></svg>"/>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet"/>
   <style>
     :root {
@@ -268,6 +269,43 @@
       section { padding:4rem 5%; }
       footer { flex-direction:column; gap:.5rem; text-align:center; }
     }
+
+    /* LIGHT THEME */
+    body.light {
+      --bg:#f0f4f8; --bg2:#e2eaf3; --card:#ffffff;
+      --border:#c8d8e8; --bord2:#a0b8d0;
+      --teal:#008f76; --teal2:#00b894;
+      --orange:#d9530a; --blue:#1a4fc4; --purple:#5b21a8;
+      --white:#0f1f33; --gray:#3a5068; --dim:#8aaac4;
+    }
+    body.light .bg-layer {
+      background:
+        radial-gradient(ellipse 70% 50% at 15% 15%, rgba(0,143,118,.06) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 45% at 85% 85%, rgba(26,79,196,.06) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 55% at 55% 5%,  rgba(91,33,168,.04) 0%, transparent 60%);
+    }
+    body.light .bg-dots { background-image: radial-gradient(rgba(0,143,118,.12) 1px, transparent 1px); }
+    body.light nav.stuck { background:rgba(240,244,248,.95); }
+    body.light .hero-card { background:rgba(255,255,255,.95); }
+    body.light .hc-top { background:linear-gradient(135deg,rgba(0,143,118,.12),rgba(26,79,196,.08)); }
+    body.light .fg input, body.light .fg textarea { background:rgba(0,0,0,.03); color:var(--white); }
+    body.light .cf, body.light .sk-domain, body.light .pj,
+    body.light .cstat-card, body.light .cert-card, body.light .hack-card,
+    body.light .c-item, body.light .ah-item { background:#ffffff; }
+    body.light .hero-stats-strip { background:rgba(255,255,255,.9); }
+    body.light #c1 { background:var(--teal); }
+    body.light #c2 { border-color:rgba(0,143,118,.6); }
+    body.light .hero-name .last { background:linear-gradient(100deg,var(--teal) 0%,#00b894 40%,var(--blue) 100%); -webkit-background-clip:text; background-clip:text; }
+
+    /* TOGGLE BUTTON */
+    #theme-toggle {
+      width:32px; height:32px; border-radius:50%;
+      background:transparent; border:1px solid var(--border);
+      cursor:pointer; display:flex; align-items:center; justify-content:center;
+      font-size:.9rem; transition:all .25s; color:var(--white); flex-shrink:0;
+    }
+    #theme-toggle:hover { border-color:var(--teal); background:rgba(0,207,170,.1); }
+
   </style>
 </head>
 <body>
@@ -280,7 +318,7 @@
 
 <!-- NAV -->
 <nav id="nav">
-  <div class="logo">Vaibhavi Kariya</div>
+  <a href="#hero" class="logo" style="text-decoration:none;">Vaibhavi Kariya</a>
   <div class="nav-links">
     <a href="#about">About</a>
     <a href="#experience">Experience</a>
@@ -288,6 +326,7 @@
     <a href="#projects">Projects</a>
     <a href="#certifications">Certs</a>
     <a href="#contact">Contact</a>
+    <button id="theme-toggle" title="Toggle light/dark mode">🌙</button>
     <a href="#contact" class="nav-cta">HIRE ME</a>
   </div>
 </nav>
@@ -335,7 +374,10 @@
 
   <div class="hero-card rvr">
     <div class="hc-top">
-      <div class="avatar"><img src="myImage.jpg" alt="Vaibhavi"/></div>
+      <div class="avatar">
+          <!-- PHOTO: save cropped image as photo.jpg in same folder as index.html -->
+          <img src="myImage1.jpg" alt="Vaibhavi Kariya" style="width:100%;height:100%;object-fit:cover;object-position:center 15%;border-radius:50%;" />
+        </div>
       <div class="hc-role">Data Science & AI Enthusiast</div>
     </div>
     <div class="hc-body">
@@ -667,6 +709,7 @@
           <div class="hack-desc">Participated in Markup Mania, a front-end focused hackathon at CHARUSAT.</div>
           <span class="hack-tag">Participation</span>
         </div>
+
       </div>
     </div>
   </div>
@@ -696,7 +739,7 @@
           <div class="fg"><label>email</label><input type="email" id="ce" placeholder="your@email.com" required/></div>
           <div class="fg"><label>subject</label><input type="text" id="cs" placeholder="Internship · Collaboration · Hello"/></div>
           <div class="fg"><label>message</label><textarea id="cm" placeholder="Hi Vaibhavi, I'd love to..." required></textarea></div>
-          <button type="submit" class="cf-btn" id="csend">EXECUTE → SEND()</button>
+          <button type="submit" class="cf-btn" id="csend">SEND</button>
           <div id="cf-fb"></div>
         </form>
       </div>
@@ -737,6 +780,25 @@
     entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('on'); });
   },{threshold:.1});
   document.querySelectorAll('.rv,.rvl,.rvr').forEach(el=>obs.observe(el));
+
+  // THEME TOGGLE
+  const toggleBtn = document.getElementById('theme-toggle');
+  function applyTheme(theme) {
+    if(theme === 'light') {
+      document.body.classList.add('light');
+      toggleBtn.textContent = '☀️';
+    } else {
+      document.body.classList.remove('light');
+      toggleBtn.textContent = '🌙';
+    }
+  }
+  applyTheme(localStorage.getItem('theme') || 'dark');
+  toggleBtn.addEventListener('click', () => {
+    const next = document.body.classList.contains('light') ? 'dark' : 'light';
+    localStorage.setItem('theme', next);
+    applyTheme(next);
+  });
+
 
   // CERT TABS
   function switchTab(id) {
