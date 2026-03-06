@@ -296,8 +296,6 @@
     body.light #c1 { background:var(--teal); }
     body.light #c2 { border-color:rgba(0,143,118,.6); }
     body.light .hero-name .last { background:linear-gradient(100deg,var(--teal) 0%,#00b894 40%,var(--blue) 100%); -webkit-background-clip:text; background-clip:text; }
-
-    /* TOGGLE BUTTON */
     #theme-toggle {
       width:32px; height:32px; border-radius:50%;
       background:transparent; border:1px solid var(--border);
@@ -350,7 +348,7 @@
       <span class="interest-pill ip-gen">✨ Generative AI</span>
     </div>
     <p class="hero-desc rv">
-      Passionate about turning data into insights and models into impact. Currently an <strong>AI Intern at LaunchED Global</strong> — built an end-to-end AI study assistant using Python, Flask, ML & NLP. Deeply curious about <strong>Gen AI, LLMs and real-world ML applications</strong>.
+      Passionate about turning data into insights and models into impact. Currently an <strong>AI Intern at LaunchED Global</strong> — built an end-to-end AI study assistant using Python, Flask, ML & NLP. Currently strengthening fundamentals in <strong>ML, Deep Learning and AI Mathematics</strong> — learning by doing, one concept at a time.
     </p>
     <div class="hero-stats-strip rv">
       <div class="hs-item"><div class="hs-n">5</div><div class="hs-l">Google Cloud Badges</div></div>
@@ -504,7 +502,7 @@
     </div>
 
     <div class="exp-item rv">
-      <div class="exp-date">Anand, India</div>
+      <div class="exp-date"><strong>Sep 26, 2025</strong>Anand, India</div>
       <div>
         <span class="exp-badge vol">◎ Volunteer</span>
         <div class="exp-title">Event Volunteer</div>
@@ -531,9 +529,9 @@
     <div class="sk-domain"><div class="sk-d-icon">✨</div><div class="sk-d-title">Generative AI</div><div class="sk-d-sub">LLMs, AI agents, prompt engineering and Gen AI apps.</div><div class="chips"><span class="chip">LLMs</span><span class="chip">AI Agents</span><span class="chip">Prompt Engineering</span><span class="chip learn">RAG ↗</span><span class="chip learn">LangChain ↗</span></div></div>
     <div class="sk-domain"><div class="sk-d-icon">💬</div><div class="sk-d-title">NLP & Deep Learning</div><div class="sk-d-sub">Text summarization, neural networks and study tip generation.</div><div class="chips"><span class="chip">NLTK</span><span class="chip">Text Summarization</span><span class="chip">Neural Networks</span><span class="chip learn">TensorFlow ↗</span><span class="chip learn">PyTorch ↗</span></div></div>
     <div class="sk-domain"><div class="sk-d-icon">📊</div><div class="sk-d-title">Data Science</div><div class="sk-d-sub">EDA, data wrangling and visualization for real insights.</div><div class="chips"><span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">Matplotlib</span><span class="chip">Seaborn</span><span class="chip">Statistics</span></div></div>
-    <div class="sk-domain"><div class="sk-d-icon">🌐</div><div class="sk-d-title">Backend & Web</div><div class="sk-d-sub">Deploying AI models into functional web applications.</div><div class="chips"><span class="chip">Flask</span><span class="chip">Python</span><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">Node.js</span></div></div>
+    <div class="sk-domain"><div class="sk-d-icon">🌐</div><div class="sk-d-title">Backend & Web</div><div class="sk-d-sub">Deploying AI models into functional web applications.</div><div class="chips"><span class="chip">Flask</span><span class="chip">Node.js</span><span class="chip">Express.js</span><span class="chip">Python</span><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span></div></div>
     <div class="sk-domain"><div class="sk-d-icon">⚡</div><div class="sk-d-title">Programming & DSA</div><div class="sk-d-sub">Strong algorithmic foundation — 120+ problems solved.</div><div class="chips"><span class="chip">C++</span><span class="chip">C</span><span class="chip">Java</span><span class="chip">Python</span><span class="chip">Arrays</span><span class="chip">Linked Lists</span><span class="chip">Sorting</span><span class="chip">Recursion</span></div></div>
-    <div class="sk-domain"><div class="sk-d-icon">🗄️</div><div class="sk-d-title">Databases & Tools</div><div class="sk-d-sub">Data storage, querying and version control.</div><div class="chips"><span class="chip">MySQL</span><span class="chip">SQL</span><span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">VS Code</span></div></div>
+    <div class="sk-domain"><div class="sk-d-icon">🗄️</div><div class="sk-d-title">Databases & Tools</div><div class="sk-d-sub">Data storage, querying and version control.</div><div class="chips"><span class="chip">Oracle</span><span class="chip">PostgreSQL</span><span class="chip">MySQL</span><span class="chip">SQL</span><span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">VS Code</span></div></div>
   </div>
   <p style="margin-top:1.2rem;font-family:'JetBrains Mono',monospace;font-size:.62rem;color:var(--dim)">↗ = actively learning</p>
 
@@ -739,7 +737,7 @@
           <div class="fg"><label>email</label><input type="email" id="ce" placeholder="your@email.com" required/></div>
           <div class="fg"><label>subject</label><input type="text" id="cs" placeholder="Internship · Collaboration · Hello"/></div>
           <div class="fg"><label>message</label><textarea id="cm" placeholder="Hi Vaibhavi, I'd love to..." required></textarea></div>
-          <button type="submit" class="cf-btn" id="csend">SEND</button>
+          <button type="submit" class="cf-btn" id="csend">SEND MESSAGE</button>
           <div id="cf-fb"></div>
         </form>
       </div>
@@ -784,13 +782,8 @@
   // THEME TOGGLE
   const toggleBtn = document.getElementById('theme-toggle');
   function applyTheme(theme) {
-    if(theme === 'light') {
-      document.body.classList.add('light');
-      toggleBtn.textContent = '☀️';
-    } else {
-      document.body.classList.remove('light');
-      toggleBtn.textContent = '🌙';
-    }
+    if(theme === 'light') { document.body.classList.add('light'); toggleBtn.textContent = '☀️'; }
+    else { document.body.classList.remove('light'); toggleBtn.textContent = '🌙'; }
   }
   applyTheme(localStorage.getItem('theme') || 'dark');
   toggleBtn.addEventListener('click', () => {
@@ -850,7 +843,7 @@
       fb.style.color = '#f87171';
       fb.textContent = '// ERROR: network issue. Email kariavaibhavi@gmail.com directly.';
     }
-    btn.textContent = 'EXECUTE → SEND()';
+    btn.textContent = 'SEND MESSAGE';
     btn.disabled = false;
     btn.style.opacity = '1';
   });
