@@ -192,17 +192,6 @@
     .cert-panel { display:none; }
     .cert-panel.active { display:block; }
 
-    /* Google badges strip */
-    .badges-strip { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:1rem; margin-bottom:2.5rem; }
-    .badge-card { background:var(--card); border:1px solid var(--border); padding:1.3rem; text-align:center; transition:all .3s; position:relative; overflow:hidden; }
-    .badge-card::after { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg,#4285f4,#34a853,#fbbc05,#ea4335); transform:scaleX(0); transition:transform .3s; }
-    .badge-card:hover::after { transform:scaleX(1); }
-    .badge-card:hover { border-color:rgba(66,133,244,.4); transform:translateY(-3px); }
-    .badge-icon { font-size:2rem; margin-bottom:.6rem; }
-    .badge-title { font-size:.78rem; font-weight:700; margin-bottom:.25rem; line-height:1.3; }
-    .badge-issuer { font-family:'JetBrains Mono',monospace; font-size:.58rem; color:#4285f4; margin-bottom:.3rem; }
-    .badge-date { font-family:'JetBrains Mono',monospace; font-size:.55rem; color:var(--gray); }
-    .badge-check { display:inline-flex; align-items:center; gap:.3rem; font-family:'JetBrains Mono',monospace; font-size:.55rem; color:var(--teal); margin-top:.4rem; }
 
     /* Cert grid */
     .cert-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:1rem; }
@@ -351,7 +340,7 @@
       Passionate about turning data into insights and models into impact. Currently an <strong>AI Intern at LaunchED Global</strong> — built an end-to-end AI study assistant using Python, Flask, ML & NLP. Currently strengthening fundamentals in <strong>ML, Deep Learning and AI Mathematics</strong> — learning by doing, one concept at a time.
     </p>
     <div class="hero-stats-strip rv">
-      <div class="hs-item"><div class="hs-n">5</div><div class="hs-l">Google Cloud Badges</div></div>
+      
       <div class="hs-sep"></div>
       <div class="hs-item"><div class="hs-n">10+</div><div class="hs-l">Certifications</div></div>
       <div class="hs-sep"></div>
@@ -362,6 +351,7 @@
     <div class="hero-btns rv">
       <a href="#projects" class="btn-fill">▶ View Projects</a>
       <a href="#certifications" class="btn-out">🏅 View Certs</a>
+      <a href="Resume_VaibhaviKariya.pdf" class="btn-out" download="VaibhaviKariya_Resume.pdf">↓ Resume</a>
     </div>
     <div class="hero-contacts rv">
       <a class="hc-item" href="mailto:kariavaibhavi@gmail.com">✉ kariavaibhavi@gmail.com</a>
@@ -374,7 +364,7 @@
     <div class="hc-top">
       <div class="avatar">
           <!-- PHOTO: save cropped image as photo.jpg in same folder as index.html -->
-          <img src="myImage1.jpg" alt="Vaibhavi Kariya" style="width:100%;height:100%;object-fit:cover;object-position:center 15%;border-radius:50%;" />
+          <img src="photo.jpg" alt="Vaibhavi Kariya" style="width:100%;height:100%;object-fit:cover;object-position:center 15%;border-radius:50%;" />
         </div>
       <div class="hc-role">Data Science & AI Enthusiast</div>
     </div>
@@ -383,7 +373,7 @@
       <div class="hc-row"><span class="hc-k">Degree</span><span class="hc-v">B.Tech CE (2028)</span></div>
       <div class="hc-row"><span class="hc-k">Internship</span><span class="hc-v orange">AI @ LaunchED Global</span></div>
       <div class="hc-row"><span class="hc-k">Location</span><span class="hc-v">Rajkot, India</span></div>
-      <div class="hc-row"><span class="hc-k">Google Badges</span><span class="hc-v green">5 Gen AI Badges ✓</span></div>
+      
       <div class="hc-row"><span class="hc-k">Status</span><span class="hc-v green">open_to_work ✓</span></div>
     </div>
     <div class="hc-focus">
@@ -412,7 +402,7 @@
         I don't just study these fields — I build with them. As an <strong>AI Intern at LaunchED Global</strong>, I developed a full-stack AI-powered study assistant from scratch, integrating ML models, NLP pipelines and a Flask backend into a single deployable web app.
       </p>
       <p>
-        I've earned <strong>5 Google Cloud Gen AI badges</strong>, completed courses from IBM, Google and LearnQuest on Coursera, and participated in multiple hackathons — including <strong>WWT All India Women Only Hackathon</strong> and HackOut'25 at DAIICT.
+        I've completed courses from IBM and LearnQuest on Coursera, earned an NPTEL Elite certification from IIT Madras, and participated in multiple hackathons — including <strong>WWT All India Women Only Hackathon</strong> and HackOut'25 at DAIICT.
       </p>
       <p>
         I'm driven by curiosity and currently strengthening my <strong>fundamentals in ML, Deep Learning and AI Mathematics</strong> — learning by doing, one concept at a time. Open for <strong>internships in Data Science, ML or AI</strong>.
@@ -427,19 +417,20 @@
         </div>
       </div>
       <div class="ah-item">
+        <div class="ah-icon">🎓</div>
+        <div>
+          <div class="ah-title">NPTEL Elite — IIT Madras</div>
+          <div class="ah-sub">Design and Analysis of Algorithms · 66% · 3 Credits · Jan–Mar 2026</div>
+        </div>
+      </div>
+      <div class="ah-item">
         <div class="ah-icon">🏆</div>
         <div>
           <div class="ah-title">Hackathon Participant</div>
           <div class="ah-sub">HackOut'25 (DAIICT), WWT Women Hackathon, TATA Crucible, CQuest & more</div>
         </div>
       </div>
-      <div class="ah-item">
-        <div class="ah-icon">☁️</div>
-        <div>
-          <div class="ah-title">Google Cloud Certified</div>
-          <div class="ah-sub">5 Gen AI completion badges — Agents, Apps, Landscape, Chatbot & Foundational Concepts</div>
-        </div>
-      </div>
+
       <div class="ah-item">
         <div class="ah-icon">💡</div>
         <div>
@@ -589,52 +580,6 @@
 <section id="certifications">
   <h2 class="sec-h rv">Certifications & <span>Achievements</span></h2>
 
-  <!-- Google Cloud Badges — always visible at top -->
-  <div class="rv" style="margin-bottom:2.5rem;">
-    <div style="display:flex;align-items:center;gap:.8rem;margin-bottom:1.2rem;">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--gray);letter-spacing:.1em;text-transform:uppercase;">// Google Cloud Skills — Gen AI Badges</div>
-      <div style="flex:1;height:1px;background:var(--border);"></div>
-      <span style="font-family:'JetBrains Mono',monospace;font-size:.6rem;color:#4285f4;">5 Earned ✓</span>
-    </div>
-    <div class="badges-strip">
-      <div class="badge-card">
-        <div class="badge-icon">🤖</div>
-        <div class="badge-title">Gen AI Agents: Transform Your Organization</div>
-        <div class="badge-issuer">Google Cloud</div>
-        <div class="badge-date">Jan 4, 2026</div>
-        <div class="badge-check">✓ Completion Badge</div>
-      </div>
-      <div class="badge-card">
-        <div class="badge-icon">⚡</div>
-        <div class="badge-title">Gen AI Apps: Transform Your Work</div>
-        <div class="badge-issuer">Google Cloud</div>
-        <div class="badge-date">Dec 25, 2025</div>
-        <div class="badge-check">✓ Completion Badge</div>
-      </div>
-      <div class="badge-card">
-        <div class="badge-icon">🗺️</div>
-        <div class="badge-title">Gen AI: Navigate the Landscape</div>
-        <div class="badge-issuer">Google Cloud</div>
-        <div class="badge-date">Dec 24, 2025</div>
-        <div class="badge-check">✓ Completion Badge</div>
-      </div>
-      <div class="badge-card">
-        <div class="badge-icon">🔓</div>
-        <div class="badge-title">Gen AI: Unlock Foundational Concepts</div>
-        <div class="badge-issuer">Google Cloud</div>
-        <div class="badge-date">Dec 22, 2025</div>
-        <div class="badge-check">✓ Completion Badge</div>
-      </div>
-      <div class="badge-card">
-        <div class="badge-icon">💬</div>
-        <div class="badge-title">Gen AI: Beyond the Chatbot</div>
-        <div class="badge-issuer">Google Cloud</div>
-        <div class="badge-date">Oct 25, 2025</div>
-        <div class="badge-check">✓ Completion Badge</div>
-      </div>
-    </div>
-  </div>
-
   <!-- Tabbed sections -->
   <div class="rv">
     <div class="cert-tabs">
@@ -646,6 +591,7 @@
     <!-- Courses -->
     <div class="cert-panel active" id="tab-courses">
       <div class="cert-grid">
+        <div class="cert-card"><div class="cert-dot dot-orange"></div><div class="cert-info"><div class="cert-name">NPTEL Elite — Design and Analysis of Algorithms</div><div class="cert-by">IIT Madras via SWAYAM · 66% · 3 Credits</div><div class="cert-when">Jan – Mar 2026</div></div></div>
         <div class="cert-card"><div class="cert-dot dot-ibm"></div><div class="cert-info"><div class="cert-name">Data Analysis with Python</div><div class="cert-by">IBM via Coursera</div><div class="cert-when">Feb 2026</div></div></div>
         <div class="cert-card"><div class="cert-dot dot-google"></div><div class="cert-info"><div class="cert-name">Introduction to Git and GitHub</div><div class="cert-by">Google via Coursera</div><div class="cert-when">Aug 2025</div></div></div>
         <div class="cert-card"><div class="cert-dot dot-coursera"></div><div class="cert-info"><div class="cert-name">Core Java Specialization (4 courses)</div><div class="cert-by">LearnQuest via Coursera</div><div class="cert-when">Feb 2026</div></div></div>
@@ -737,7 +683,7 @@
           <div class="fg"><label>email</label><input type="email" id="ce" placeholder="your@email.com" required/></div>
           <div class="fg"><label>subject</label><input type="text" id="cs" placeholder="Internship · Collaboration · Hello"/></div>
           <div class="fg"><label>message</label><textarea id="cm" placeholder="Hi Vaibhavi, I'd love to..." required></textarea></div>
-          <button type="submit" class="cf-btn" id="csend">SEND MESSAGE</button>
+          <button type="submit" class="cf-btn" id="csend">EXECUTE → SEND()</button>
           <div id="cf-fb"></div>
         </form>
       </div>
@@ -843,7 +789,7 @@
       fb.style.color = '#f87171';
       fb.textContent = '// ERROR: network issue. Email kariavaibhavi@gmail.com directly.';
     }
-    btn.textContent = 'SEND MESSAGE';
+    btn.textContent = 'EXECUTE → SEND()';
     btn.disabled = false;
     btn.style.opacity = '1';
   });
