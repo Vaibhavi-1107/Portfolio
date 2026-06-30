@@ -106,18 +106,27 @@
     .hc-focus-pills { display:flex; flex-wrap:wrap; gap:.35rem; }
     .hf-pill { font-family:'JetBrains Mono',monospace; font-size:.55rem; padding:.18rem .5rem; }
 
-    /* ABOUT ME */
+    /* ABOUT ME — new compact version */
     #about { background:var(--bg); }
     .about-wrap { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:start; }
-    .about-text p { color:var(--gray); font-size:.92rem; line-height:1.95; margin-bottom:1.2rem; }
-    .about-text p strong { color:var(--teal); font-weight:500; }
-    .about-text p em { color:var(--white); font-style:normal; }
-    .about-highlights { display:flex; flex-direction:column; gap:.8rem; }
-    .ah-item { display:flex; align-items:flex-start; gap:1rem; background:var(--card); border:1px solid var(--border); padding:1rem 1.2rem; transition:border-color .2s; }
-    .ah-item:hover { border-color:rgba(0,207,170,.3); }
-    .ah-icon { font-size:1.4rem; flex-shrink:0; margin-top:.1rem; }
-    .ah-title { font-weight:700; font-size:.88rem; margin-bottom:.2rem; }
-    .ah-sub { font-size:.75rem; color:var(--gray); line-height:1.5; }
+
+    /* Snapshot grid */
+    .about-snapshot { display:grid; grid-template-columns:1fr 1fr; gap:.75rem; }
+    .snap-card { background:var(--card); border:1px solid var(--border); padding:1rem 1.2rem; transition:border-color .2s; }
+    .snap-card:hover { border-color:rgba(0,207,170,.3); }
+    .snap-label { font-family:'JetBrains Mono',monospace; font-size:.58rem; color:var(--gray); text-transform:uppercase; letter-spacing:.08em; margin-bottom:.3rem; }
+    .snap-value { font-size:.85rem; font-weight:700; line-height:1.3; }
+    .snap-value.teal { color:var(--teal); }
+    .snap-value.orange { color:var(--orange); }
+    .snap-value.blue { color:#93c5fd; }
+
+    .about-bio { margin-bottom:1.5rem; }
+    .about-bio p { color:var(--gray); font-size:.9rem; line-height:1.8; }
+    .about-bio p strong { color:var(--teal); font-weight:500; }
+    .about-bio p em { color:var(--white); font-style:normal; }
+
+    .about-tags { display:flex; flex-wrap:wrap; gap:.4rem; margin-top:1rem; }
+    .about-tag { font-family:'JetBrains Mono',monospace; font-size:.6rem; padding:.22rem .6rem; background:rgba(0,207,170,.06); border:1px solid rgba(0,207,170,.15); color:var(--gray); }
 
     /* EXPERIENCE */
     #experience { background:var(--bg2); }
@@ -130,6 +139,7 @@
     .exp-badge.intern { background:rgba(255,107,43,.1); border:1px solid rgba(255,107,43,.3); color:var(--orange); }
     .exp-badge.vol    { background:rgba(0,207,170,.08); border:1px solid rgba(0,207,170,.2); color:var(--teal); }
     .exp-badge.virt   { background:rgba(124,58,237,.1); border:1px solid rgba(124,58,237,.3); color:#c4b5fd; }
+    .exp-badge.oss    { background:rgba(37,99,235,.1); border:1px solid rgba(37,99,235,.3); color:#93c5fd; }
     .exp-title { font-size:1rem; font-weight:700; margin-bottom:.2rem; letter-spacing:-.3px; }
     .exp-org   { font-family:'JetBrains Mono',monospace; font-size:.72rem; color:var(--teal); margin-bottom:.9rem; }
     .exp-list  { list-style:none; }
@@ -175,6 +185,7 @@
     .pj-label.ai { background:rgba(124,58,237,.1); border:1px solid rgba(124,58,237,.25); color:#c4b5fd; }
     .pj-label.ds { background:rgba(0,207,170,.08); border:1px solid rgba(0,207,170,.22); color:var(--teal); }
     .pj-label.cp { background:rgba(37,99,235,.1);  border:1px solid rgba(37,99,235,.25); color:#93c5fd; }
+    .pj-label.research { background:rgba(255,107,43,.1); border:1px solid rgba(255,107,43,.25); color:var(--orange); }
     .pj-title { font-size:1rem; font-weight:700; margin-bottom:.6rem; letter-spacing:-.3px; }
     .pj-desc  { color:var(--gray); font-size:.82rem; line-height:1.75; margin-bottom:1.2rem; }
     .pj-stack { display:flex; flex-wrap:wrap; gap:.35rem; margin-bottom:1.2rem; }
@@ -183,6 +194,7 @@
     .pj-links a { font-family:'JetBrains Mono',monospace; font-size:.68rem; color:var(--teal); text-decoration:none; border-bottom:1px solid transparent; transition:border-color .2s; }
     .pj-links a:hover { border-color:var(--teal); }
     .pj-links a.soon { color:var(--dim); cursor:default; border-bottom:none; }
+    .pj-metric { display:inline-flex; align-items:center; gap:.35rem; font-family:'JetBrains Mono',monospace; font-size:.6rem; padding:.22rem .65rem; background:rgba(0,207,170,.08); border:1px solid rgba(0,207,170,.2); color:var(--teal); margin-bottom:.9rem; }
 
     /* CERTIFICATIONS */
     #certifications { background:var(--bg); }
@@ -192,8 +204,6 @@
     .cert-panel { display:none; }
     .cert-panel.active { display:block; }
 
-
-    /* Cert grid */
     .cert-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:1rem; }
     .cert-card { background:var(--card); border:1px solid var(--border); padding:1.2rem 1.4rem; display:flex; align-items:flex-start; gap:.9rem; transition:all .25s; }
     .cert-card:hover { border-color:rgba(0,207,170,.3); transform:translateX(4px); }
@@ -208,7 +218,6 @@
     .cert-by   { font-family:'JetBrains Mono',monospace; font-size:.6rem; color:var(--teal); margin-bottom:.2rem; }
     .cert-when { font-family:'JetBrains Mono',monospace; font-size:.58rem; color:var(--gray); }
 
-    /* Hackathon grid */
     .hack-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:1rem; }
     .hack-card { background:var(--card); border:1px solid var(--border); border-left:3px solid var(--orange); padding:1.2rem 1.4rem; transition:all .25s; }
     .hack-card:hover { border-color:rgba(255,107,43,.5); transform:translateY(-2px); }
@@ -216,6 +225,7 @@
     .hack-org   { font-family:'JetBrains Mono',monospace; font-size:.62rem; color:var(--orange); margin-bottom:.3rem; }
     .hack-desc  { font-size:.75rem; color:var(--gray); line-height:1.55; }
     .hack-tag   { display:inline-flex; font-family:'JetBrains Mono',monospace; font-size:.55rem; padding:.15rem .5rem; margin-top:.6rem; background:rgba(255,107,43,.08); border:1px solid rgba(255,107,43,.2); color:var(--orange); }
+    .hack-tag.gold { background:rgba(255,215,0,.1); border-color:rgba(255,215,0,.3); color:#ffd700; }
 
     /* CONTACT */
     #contact { background:var(--bg2); }
@@ -252,6 +262,7 @@
       #hero { grid-template-columns:1fr; }
       .hero-card { display:none; }
       .about-wrap { grid-template-columns:1fr; gap:2rem; }
+      .about-snapshot { grid-template-columns:1fr 1fr; }
       .contact-wrap { grid-template-columns:1fr; }
       .exp-item { grid-template-columns:1fr; }
       .nav-links a:not(.nav-cta) { display:none; }
@@ -280,7 +291,7 @@
     body.light .fg input, body.light .fg textarea { background:rgba(0,0,0,.03); color:var(--white); }
     body.light .cf, body.light .sk-domain, body.light .pj,
     body.light .cstat-card, body.light .cert-card, body.light .hack-card,
-    body.light .c-item, body.light .ah-item { background:#ffffff; }
+    body.light .c-item, body.light .snap-card { background:#ffffff; }
     body.light .hero-stats-strip { background:rgba(255,255,255,.9); }
     body.light #c1 { background:var(--teal); }
     body.light #c2 { border-color:rgba(0,143,118,.6); }
@@ -292,7 +303,6 @@
       font-size:.9rem; transition:all .25s; color:var(--white); flex-shrink:0;
     }
     #theme-toggle:hover { border-color:var(--teal); background:rgba(0,207,170,.1); }
-
   </style>
 </head>
 <body>
@@ -340,7 +350,6 @@
       Passionate about turning data into insights and models into impact. Currently an <strong>AI Intern at LaunchED Global</strong> — built an end-to-end AI study assistant using Python, Flask, ML & NLP. Currently strengthening fundamentals in <strong>ML, Deep Learning and AI Mathematics</strong> — learning by doing, one concept at a time.
     </p>
     <div class="hero-stats-strip rv">
-      
       <div class="hs-sep"></div>
       <div class="hs-item"><div class="hs-n">10+</div><div class="hs-l">Certifications</div></div>
       <div class="hs-sep"></div>
@@ -363,9 +372,8 @@
   <div class="hero-card rvr">
     <div class="hc-top">
       <div class="avatar">
-          <!-- PHOTO: save cropped image as photo.jpg in same folder as index.html -->
-          <img src="myImage1.jpg" alt="Vaibhavi Kariya" style="width:100%;height:100%;object-fit:cover;object-position:center 15%;border-radius:50%;" />
-        </div>
+        <img src="myImage1.jpg" alt="Vaibhavi Kariya" style="width:100%;height:100%;object-fit:cover;object-position:center 15%;border-radius:50%;" />
+      </div>
       <div class="hc-role">Data Science & AI Enthusiast</div>
     </div>
     <div class="hc-body">
@@ -373,7 +381,6 @@
       <div class="hc-row"><span class="hc-k">Degree</span><span class="hc-v">B.Tech CE (2028)</span></div>
       <div class="hc-row"><span class="hc-k">Internship</span><span class="hc-v orange">AI @ LaunchED Global</span></div>
       <div class="hc-row"><span class="hc-k">Location</span><span class="hc-v">Rajkot, India</span></div>
-      
       <div class="hc-row"><span class="hc-k">Status</span><span class="hc-v green">open_to_work ✓</span></div>
     </div>
     <div class="hc-focus">
@@ -390,60 +397,53 @@
   </div>
 </section>
 
-<!-- ABOUT ME -->
+<!-- ABOUT ME — compact snapshot layout -->
 <section id="about">
   <h2 class="sec-h rv">About <span>Me</span></h2>
   <div class="about-wrap">
-    <div class="about-text rv">
-      <p>
-        Hi, I'm <em>Vaibhavi Kariya</em> — a second-year B.Tech Computer Engineering student at CHARUSAT, Anand, with a deep passion for <strong>Data Science, Machine Learning, Deep Learning and Generative AI</strong>.
-      </p>
-      <p>
-        I don't just study these fields — I build with them. As an <strong>AI Intern at LaunchED Global</strong>, I developed a full-stack AI-powered study assistant from scratch, integrating ML models, NLP pipelines and a Flask backend into a single deployable web app.
-      </p>
-      <p>
-        I've completed courses from IBM and LearnQuest on Coursera, earned an NPTEL Elite certification from IIT Madras, and participated in multiple hackathons — including <strong>WWT All India Women Only Hackathon</strong> and HackOut'25 at DAIICT.
-      </p>
-      <p>
-        I'm driven by curiosity and currently strengthening my <strong>fundamentals in ML, Deep Learning and AI Mathematics</strong> — learning by doing, one concept at a time. Open for <strong>internships in Data Science, ML or AI</strong>.
-      </p>
+    <div class="rvl">
+      <div class="about-bio">
+        <p>
+          Third-year B.Tech Computer Engineering student at <em>CHARUSAT</em> with hands-on experience in <strong>AI-integrated web apps, deep learning, and open-source contribution</strong>. Built production AI systems using Python, PyTorch, Flask, and NLP — from REST APIs to hybrid deep learning architectures. Active GSSoC 2026 contributor and hackathon participant.
+        </p>
+      </div>
+      <div class="about-tags">
+        <span class="about-tag">Python</span>
+        <span class="about-tag">PyTorch</span>
+        <span class="about-tag">Flask</span>
+        <span class="about-tag">ResNet-50</span>
+        <span class="about-tag">GraphSAGE</span>
+        <span class="about-tag">NLP</span>
+        <span class="about-tag">REST APIs</span>
+        <span class="about-tag">PostgreSQL</span>
+        <span class="about-tag">GSSoC 2026</span>
+        <span class="about-tag">Open Source</span>
+      </div>
     </div>
-    <div class="about-highlights rvr">
-      <div class="ah-item">
-        <div class="ah-icon">🎓</div>
-        <div>
-          <div class="ah-title">Currently Learning</div>
-          <div class="ah-sub">Fundamentals in ML, Deep Learning, AI Mathematics and EDA techniques</div>
-        </div>
+    <div class="about-snapshot rvr">
+      <div class="snap-card">
+        <div class="snap-label">Current</div>
+        <div class="snap-value teal">B.Tech CE · CHARUSAT</div>
       </div>
-      <div class="ah-item">
-        <div class="ah-icon">🎓</div>
-        <div>
-          <div class="ah-title">NPTEL Elite — IIT Madras</div>
-          <div class="ah-sub">Design and Analysis of Algorithms · 66% · 3 Credits · Jan–Mar 2026</div>
-        </div>
+      <div class="snap-card">
+        <div class="snap-label">Internship</div>
+        <div class="snap-value orange">AI @ LaunchED Global</div>
       </div>
-      <div class="ah-item">
-        <div class="ah-icon">🏆</div>
-        <div>
-          <div class="ah-title">Hackathon Participant</div>
-          <div class="ah-sub">HackOut'25 (DAIICT), WWT Women Hackathon, TATA Crucible, CQuest & more</div>
-        </div>
+      <div class="snap-card">
+        <div class="snap-label">Certifications</div>
+        <div class="snap-value teal">10+ Earned</div>
       </div>
-
-      <div class="ah-item">
-        <div class="ah-icon">💡</div>
-        <div>
-          <div class="ah-title">Beyond Code</div>
-          <div class="ah-sub">GSSoC 2026 Contributor, NSS volunteer, INNOTECH event coordinator, active in university tech community</div>
-        </div>
+      <div class="snap-card">
+        <div class="snap-label">DSA Solved</div>
+        <div class="snap-value blue">200+ Problems</div>
       </div>
-      <div class="ah-item">
-        <div class="ah-icon">🎯</div>
-        <div>
-          <div class="ah-title">Goal</div>
-          <div class="ah-sub">Build impactful AI products that solve real problems — and grow into a full-stack Data Scientist</div>
-        </div>
+      <div class="snap-card">
+        <div class="snap-label">Open Source</div>
+        <div class="snap-value teal">GSSoC 2026</div>
+      </div>
+      <div class="snap-card">
+        <div class="snap-label">Hackathon</div>
+        <div class="snap-value orange">14th / 188 Teams</div>
       </div>
     </div>
   </div>
@@ -455,22 +455,37 @@
   <div class="exp-timeline">
 
     <div class="exp-item rv">
+      <div class="exp-date"><strong>May – Aug 2026</strong>Remote</div>
+      <div>
+        <span class="exp-badge oss">◆ Open Source</span>
+        <div class="exp-title">Open Source Contributor</div>
+        <div class="exp-org">GirlScript Summer of Code (GSSoC) 2026</div>
+        <ul class="exp-list">
+          <li>Contributing to open-source repositories across multiple projects as part of <strong>GSSoC Extended 2026</strong></li>
+          <li>Raised pull requests with clean, production-ready code following contribution guidelines</li>
+          <li>Collaborated with maintainers on bug fixes, feature additions, and code quality improvements</li>
+        </ul>
+        <div class="exp-chips">
+          <span class="echip">Open Source</span><span class="echip">JavaScript</span><span class="echip">Security</span><span class="echip">GitHub</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-item rv">
       <div class="exp-date"><strong>Dec 2025 – Feb 2026</strong>Remote</div>
       <div>
         <span class="exp-badge intern">● Internship</span>
         <div class="exp-title">AI & Backend Developer — Intern</div>
         <div class="exp-org">LaunchED Global</div>
         <ul class="exp-list">
-          <li>Designed and developed an <strong>AI-powered study assistant</strong> using Python and Flask</li>
-          <li>Implemented <strong>ML models</strong> for quiz generation and topic clustering</li>
-          <li>Applied <strong>Deep Learning & NLP</strong> (NLTK) for text summarization and study tip generation</li>
-          <li>Integrated multiple AI modules into a <strong>single Flask web application</strong></li>
-          <li>Conducted data preprocessing, model evaluation and result analysis</li>
-          <li>Delivered end-to-end AI web app with <strong>downloadable study schedules</strong> as capstone project</li>
+          <li>Designed and implemented a modular <strong>Flask REST API</strong> integrating 3 ML modules into a single production-ready web application</li>
+          <li>Built <strong>Scikit-learn models</strong> for content personalisation (+20% accuracy) and an NLTK NLP pipeline for automated text summarisation</li>
+          <li>Reduced manual study prep time by ~30%, improved API response time by 15%</li>
+          <li>Owned end-to-end delivery: data preprocessing, model evaluation, REST API integration, and deployment</li>
         </ul>
         <div class="exp-chips">
           <span class="echip">Python</span><span class="echip">Flask</span><span class="echip">Machine Learning</span>
-          <span class="echip">NLP</span><span class="echip">Deep Learning</span><span class="echip">NLTK</span>
+          <span class="echip">NLP</span><span class="echip">NLTK</span><span class="echip">REST API</span>
         </div>
       </div>
     </div>
@@ -501,7 +516,6 @@
         <ul class="exp-list">
           <li>Volunteered at <strong>INNOTECH 2.0</strong>, a technical event by Dept. of Computer Engineering, CSPIT</li>
           <li>Handled participant management, session support and coordination</li>
-          <li>Coordinated with faculty and the organizing team throughout the event</li>
         </ul>
         <div class="exp-chips">
           <span class="echip">Event Management</span><span class="echip">Teamwork</span><span class="echip">Coordination</span>
@@ -518,7 +532,7 @@
   <div class="skills-cols rv">
     <div class="sk-domain"><div class="sk-d-icon">🧠</div><div class="sk-d-title">AI / Machine Learning</div><div class="sk-d-sub">Building and evaluating intelligent models on real datasets.</div><div class="chips"><span class="chip">Scikit-learn</span><span class="chip">Regression</span><span class="chip">Classification</span><span class="chip">Clustering</span><span class="chip">Model Eval</span></div></div>
     <div class="sk-domain"><div class="sk-d-icon">✨</div><div class="sk-d-title">Generative AI</div><div class="sk-d-sub">LLMs, AI agents, prompt engineering and Gen AI apps.</div><div class="chips"><span class="chip">LLMs</span><span class="chip">AI Agents</span><span class="chip">Prompt Engineering</span><span class="chip learn">RAG ↗</span><span class="chip learn">LangChain ↗</span></div></div>
-    <div class="sk-domain"><div class="sk-d-icon">💬</div><div class="sk-d-title">NLP & Deep Learning</div><div class="sk-d-sub">Text summarization, neural networks and study tip generation.</div><div class="chips"><span class="chip">NLTK</span><span class="chip">Text Summarization</span><span class="chip">Neural Networks</span><span class="chip learn">TensorFlow ↗</span><span class="chip learn">PyTorch ↗</span></div></div>
+    <div class="sk-domain"><div class="sk-d-icon">💬</div><div class="sk-d-title">NLP & Deep Learning</div><div class="sk-d-sub">Text summarization, neural networks and medical imaging research.</div><div class="chips"><span class="chip">NLTK</span><span class="chip">Text Summarization</span><span class="chip">CNN</span><span class="chip">GNN</span><span class="chip learn">TensorFlow ↗</span><span class="chip">PyTorch</span></div></div>
     <div class="sk-domain"><div class="sk-d-icon">📊</div><div class="sk-d-title">Data Science</div><div class="sk-d-sub">EDA, data wrangling and visualization for real insights.</div><div class="chips"><span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">Matplotlib</span><span class="chip">Seaborn</span><span class="chip">Statistics</span></div></div>
     <div class="sk-domain"><div class="sk-d-icon">🌐</div><div class="sk-d-title">Backend & Web</div><div class="sk-d-sub">Deploying AI models into functional web applications.</div><div class="chips"><span class="chip">Flask</span><span class="chip">Node.js</span><span class="chip">Express.js</span><span class="chip">Python</span><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span></div></div>
     <div class="sk-domain"><div class="sk-d-icon">⚡</div><div class="sk-d-title">Programming & DSA</div><div class="sk-d-sub">Strong algorithmic foundation — 200+ problems solved.</div><div class="chips"><span class="chip">C++</span><span class="chip">C</span><span class="chip">Java</span><span class="chip">Python</span><span class="chip">Arrays</span><span class="chip">Linked Lists</span><span class="chip">Sorting</span><span class="chip">Recursion</span></div></div>
@@ -554,25 +568,41 @@
 <section id="projects">
   <h2 class="sec-h rv">Featured <span>Projects</span></h2>
   <div class="proj-grid rv">
+
+    <div class="pj">
+      <span class="pj-label research">🔬 Research · Medical AI</span>
+      <div class="pj-title">HGC-Net: Hybrid CNN-GraphSAGE-CBAM</div>
+      <div class="pj-metric">✦ 94.89% Accuracy · AUC 0.982 · Paper Under Review</div>
+      <p class="pj-desc">3-stage hybrid system for histopathology classification on the MIDOG 2025 dataset (11,939 patches). ResNet-50 extracts patch-level features, a k-NN GraphSAGE GNN models relational context across tissue regions, and CBAM-1D channel attention refines the representation before classification. Addressed 5.8:1 class imbalance via Focal Loss and targeted augmentation.</p>
+      <div class="pj-stack"><span class="pj-s">Python</span><span class="pj-s">PyTorch</span><span class="pj-s">ResNet-50</span><span class="pj-s">GraphSAGE</span><span class="pj-s">CBAM</span><span class="pj-s">Focal Loss</span></div>
+      <div class="pj-links">
+        <a href="https://github.com/Vaibhavi-1107/Mitosis_Research" target="_blank">GitHub →</a>
+        <span class="soon">Paper Under Review</span>
+      </div>
+    </div>
+
     <div class="pj">
       <span class="pj-label ai">🧠 AI / NLP</span>
       <div class="pj-title">AI Study Assistant</div>
       <p class="pj-desc">Built a Flask REST backend integrating a Scikit-learn topic clustering model for content organisation, an NLTK-based NLP pipeline for automated text summarisation and keyword extraction, and a quiz generation engine producing context-aware questions from study material. Final output includes downloadable personalised study schedules.</p>
       <div class="pj-stack"><span class="pj-s">Python</span><span class="pj-s">Flask</span><span class="pj-s">Scikit-learn</span><span class="pj-s">NLTK</span><span class="pj-s">NLP</span><span class="pj-s">REST API</span></div>
       <div class="pj-links">
-        <a href="https://github.com/Vaibhavi-1107" target="_blank">GitHub →</a>
+        <a href="https://github.com/Vaibhavi-1107/AI_Study_Pal" target="_blank">GitHub →</a>
         <a href="https://ai-study-pal-upgm.onrender.com/" target="_blank">Live Demo →</a>
       </div>
     </div>
+
     <div class="pj">
       <span class="pj-label ds">📊 Data Science</span>
       <div class="pj-title">Exploratory Data Analysis Tool</div>
       <p class="pj-desc">Automated EDA tool that accepts any structured dataset and generates a full analysis report — statistical summaries (mean, median, std dev, skewness), Pearson correlation matrix heatmaps, distribution plots with KDE overlays, and IQR-based outlier detection. Designed for reusability across domains.</p>
       <div class="pj-stack"><span class="pj-s">Python</span><span class="pj-s">Pandas</span><span class="pj-s">Matplotlib</span><span class="pj-s">Seaborn</span></div>
       <div class="pj-links">
-        <a href="https://github.com/Vaibhavi-1107" target="_blank">GitHub →</a>
+        <a href="https://github.com/Vaibhavi-1107/data-lens" target="_blank">GitHub →</a>
+        <a href="https://data-lens-nu.vercel.app/" target="_blank">Live Demo →</a>
       </div>
     </div>
+
   </div>
 </section>
 
@@ -580,17 +610,17 @@
 <section id="certifications">
   <h2 class="sec-h rv">Certifications & <span>Achievements</span></h2>
 
-  <!-- Tabbed sections -->
   <div class="rv">
     <div class="cert-tabs">
-      <button class="cert-tab active" onclick="switchTab('courses')">📚 Courses</button>
-      <button class="cert-tab" onclick="switchTab('workshops')">🛠 Workshops</button>
-      <button class="cert-tab" onclick="switchTab('hackathons')">⚡ Hackathons</button>
+      <button class="cert-tab active" onclick="switchTab('courses', event)">📚 Courses</button>
+      <button class="cert-tab" onclick="switchTab('workshops', event)">🛠 Workshops</button>
+      <button class="cert-tab" onclick="switchTab('hackathons', event)">⚡ Hackathons</button>
     </div>
 
     <!-- Courses -->
     <div class="cert-panel active" id="tab-courses">
       <div class="cert-grid">
+        <div class="cert-card"><div class="cert-dot dot-ibm"></div><div class="cert-info"><div class="cert-name">IBM SkillsBuild — AI Fundamentals</div><div class="cert-by">IBM SkillsBuild</div><div class="cert-when">Jun 2026</div></div></div>
         <div class="cert-card"><div class="cert-dot dot-orange"></div><div class="cert-info"><div class="cert-name">NPTEL Elite — Design and Analysis of Algorithms</div><div class="cert-by">IIT Madras via SWAYAM · 66% · 3 Credits</div><div class="cert-when">Jan – Mar 2026</div></div></div>
         <div class="cert-card"><div class="cert-dot dot-ibm"></div><div class="cert-info"><div class="cert-name">Data Analysis with Python</div><div class="cert-by">IBM via Coursera</div><div class="cert-when">Feb 2026</div></div></div>
         <div class="cert-card"><div class="cert-dot dot-google"></div><div class="cert-info"><div class="cert-name">Introduction to Git and GitHub</div><div class="cert-by">Google via Coursera</div><div class="cert-when">Aug 2025</div></div></div>
@@ -621,7 +651,13 @@
           <div class="hack-title">TechSprint Hackathon — 14th / 188 Teams</div>
           <div class="hack-org">GDG CHARUSAT</div>
           <div class="hack-desc">Secured 14th position out of 188 teams at TechSprint Hackathon organized by GDG CHARUSAT — a competitive inter-college tech event.</div>
-          <span class="hack-tag">14th / 188 Teams</span>
+          <span class="hack-tag gold">🏆 14th / 188 Teams</span>
+        </div>
+        <div class="hack-card">
+          <div class="hack-title">HACKTRACK 2026</div>
+          <div class="hack-org">CSPIT CHARUSAT</div>
+          <div class="hack-desc">Participated in HACKTRACK 2026, a technical hackathon organized at CSPIT, CHARUSAT.</div>
+          <span class="hack-tag">Participation</span>
         </div>
         <div class="hack-card">
           <div class="hack-title">WWT All India Women Only Hackathon</div>
@@ -659,7 +695,6 @@
           <div class="hack-desc">Participated in Markup Mania, a front-end focused hackathon at CHARUSAT.</div>
           <span class="hack-tag">Participation</span>
         </div>
-
       </div>
     </div>
   </div>
@@ -744,13 +779,12 @@
     applyTheme(next);
   });
 
-
   // CERT TABS
-  function switchTab(id) {
+  function switchTab(id, event) {
     document.querySelectorAll('.cert-tab').forEach(t => t.classList.remove('active'));
     document.querySelectorAll('.cert-panel').forEach(p => p.classList.remove('active'));
     document.getElementById('tab-' + id).classList.add('active');
-    event.target.classList.add('active');
+    if(event && event.target) event.target.classList.add('active');
   }
 
   // CONTACT FORM
