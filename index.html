@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vaibhavi Kariya — Data Science & AI</title>
-  <meta name="description" content="B.Tech CE Student | Data Science · ML · DL · Gen AI Enthusiast | AI Intern"/>
+  <title>Vaibhavi Kariya — Research & Software Engineering</title>
+  <meta name="description" content="B.Tech CE Student | Deep Learning for Medical Image Analysis · Data Science · ML · Gen AI | Researcher & Developer"/>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%2303060f'/><text x='50' y='68' font-family='Arial' font-size='42' font-weight='900' text-anchor='middle' fill='%2300cfaa'>VK</text></svg>"/>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet"/>
   <style>
@@ -258,6 +258,22 @@
     .rvr { opacity:0; transform:translateX(18px);  transition:opacity .6s ease, transform .6s ease; }
     .rv.on, .rvl.on, .rvr.on { opacity:1; transform:none; }
 
+    /* RESEARCH (new section — reuses .pj card styles) */
+    #research { background:var(--bg); border-top:1px solid var(--border); }
+    .res-intro { color:var(--gray); font-size:.9rem; line-height:1.85; max-width:760px; margin:-1rem 0 2rem; }
+    .res-intro strong { color:var(--teal); font-weight:500; }
+    .res-interests { display:flex; flex-wrap:wrap; gap:.4rem; margin:-1rem 0 2rem; }
+    .pj-head { display:flex; flex-wrap:wrap; gap:.5rem; align-items:center; margin-bottom:1rem; }
+    .pj-head .pj-label { margin-bottom:0; }
+    .st { display:inline-flex; font-family:'JetBrains Mono',monospace; font-size:.55rem; font-weight:700; padding:.18rem .6rem; letter-spacing:.08em; text-transform:uppercase; }
+    .st.acc { background:rgba(0,207,170,.1); border:1px solid rgba(0,207,170,.35); color:var(--teal); }
+    .st.rev { background:rgba(255,107,43,.1); border:1px solid rgba(255,107,43,.35); color:var(--orange); }
+    .st.sub { background:rgba(37,99,235,.1); border:1px solid rgba(37,99,235,.35); color:#93c5fd; }
+    .pj-meta { font-family:'JetBrains Mono',monospace; font-size:.62rem; color:var(--gray); line-height:1.7; margin-bottom:.9rem; }
+    .pj-meta strong { color:var(--white); font-weight:500; }
+    .res-title { font-size:.95rem; line-height:1.45; }
+    .exp-badge.res { background:rgba(0,207,170,.08); border:1px solid rgba(0,207,170,.25); color:var(--teal); }
+
     @media (max-width:900px) {
       #hero { grid-template-columns:1fr; }
       .hero-card { display:none; }
@@ -318,6 +334,7 @@
   <a href="#hero" class="logo" style="text-decoration:none;">Vaibhavi Kariya</a>
   <div class="nav-links">
     <a href="#about">About</a>
+    <a href="#research">Research</a>
     <a href="#experience">Experience</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
@@ -331,25 +348,28 @@
 <!-- HERO -->
 <section id="hero">
   <div>
-    <div class="hero-badge rv"><span class="pulse"></span>OPEN FOR INTERNSHIPS & OPPORTUNITIES</div>
+    <div class="hero-badge rv"><span class="pulse"></span>OPEN FOR RESEARCH & SDE INTERNSHIPS</div>
     <h1 class="hero-name rv">
       <span class="first">Vaibhavi</span>
       <span class="last">Kariya</span>
     </h1>
     <div class="hero-title rv">
-      <strong>Data Science · ML · Deep Learning · Gen AI</strong> Enthusiast<br/>
-      B.Tech Computer Engineering · CHARUSAT, Anand
+      <strong>Deep Learning · Medical Image Analysis · Data Science · Gen AI</strong><br/>
+      Undergraduate Researcher & Developer · B.Tech Computer Engineering · CHARUSAT, Anand
     </div>
     <div class="hero-interests rv">
-      <span class="interest-pill ip-ds">📊 Data Science</span>
-      <span class="interest-pill ip-ml">🤖 Machine Learning</span>
+      <span class="interest-pill ip-gen">🔬 Medical Image Analysis</span>
       <span class="interest-pill ip-dl">🧠 Deep Learning</span>
+      <span class="interest-pill ip-ml">🤖 Machine Learning</span>
+      <span class="interest-pill ip-ds">📊 Data Science</span>
       <span class="interest-pill ip-gen">✨ Generative AI</span>
     </div>
     <p class="hero-desc rv">
-      Passionate about turning data into insights and models into impact. Currently an <strong>AI Intern at LaunchED Global</strong> — built an end-to-end AI study assistant using Python, Flask, ML & NLP. Currently strengthening fundamentals in <strong>ML, Deep Learning and AI Mathematics</strong> — learning by doing, one concept at a time.
+      Passionate about turning data into insights and models into impact. <strong>First author of three research works</strong> in medical image analysis, including a paper <strong>accepted and presented at ICST 2026, IIT Patna</strong>. Also a developer — built an end-to-end AI study assistant with Python, Flask, ML & NLP during an <strong>AI & Backend internship at LaunchED Global</strong>, and contribute to open source through <strong>GSSoC 2026</strong>.
     </p>
     <div class="hero-stats-strip rv">
+      <div class="hs-sep"></div>
+      <div class="hs-item"><div class="hs-n">3</div><div class="hs-l">First-Author Papers</div></div>
       <div class="hs-sep"></div>
       <div class="hs-item"><div class="hs-n">10+</div><div class="hs-l">Certifications</div></div>
       <div class="hs-sep"></div>
@@ -358,9 +378,11 @@
       <div class="hs-item"><div class="hs-n">200+</div><div class="hs-l">Problems Solved</div></div>
     </div>
     <div class="hero-btns rv">
-      <a href="#projects" class="btn-fill">▶ View Projects</a>
+      <a href="#research" class="btn-fill">▶ View Research</a>
+      <a href="#projects" class="btn-out">💻 View Projects</a>
       <a href="#certifications" class="btn-out">🏅 View Certs</a>
-      <a href="Vaibhavi_Kariya.pdf" class="btn-out" download="Vaibhavi_Kariya.pdf">↓ Resume</a>
+      <!-- <a href="Vaibhavi_Kariya.pdf" class="btn-out" download="Vaibhavi_Kariya.pdf">↓ Resume</a> -->
+      <a href="Vaibhavi_Kariya_Research_CV.pdf" class="btn-out" download="Vaibhavi_Kariya_Research_CV.pdf">↓ Resume</a>
     </div>
     <div class="hero-contacts rv">
       <a class="hc-item" href="mailto:kariavaibhavi@gmail.com">✉ kariavaibhavi@gmail.com</a>
@@ -374,21 +396,22 @@
       <div class="avatar">
         <img src="myImage1.jpg" alt="Vaibhavi Kariya" style="width:100%;height:100%;object-fit:cover;object-position:center 15%;border-radius:50%;" />
       </div>
-      <div class="hc-role">Data Science & AI Enthusiast</div>
+      <div class="hc-role">Deep Learning Researcher & Developer</div>
     </div>
     <div class="hc-body">
       <div class="hc-row"><span class="hc-k">University</span><span class="hc-v">CHARUSAT, Anand</span></div>
       <div class="hc-row"><span class="hc-k">Degree</span><span class="hc-v">B.Tech CE (2028)</span></div>
-      <div class="hc-row"><span class="hc-k">Internship</span><span class="hc-v orange">AI @ LaunchED Global</span></div>
+      <div class="hc-row"><span class="hc-k">Research</span><span class="hc-v orange">Medical Image Analysis</span></div>
       <div class="hc-row"><span class="hc-k">Location</span><span class="hc-v">Rajkot, India</span></div>
       <div class="hc-row"><span class="hc-k">Status</span><span class="hc-v green">open_to_work ✓</span></div>
     </div>
     <div class="hc-focus">
       <div class="hc-focus-label">// Core Interests</div>
       <div class="hc-focus-pills">
+        <span class="hf-pill ip-gen">Medical Imaging</span>
+        <span class="hf-pill ip-dl">Deep Learning</span>
         <span class="hf-pill ip-ds">Data Science</span>
         <span class="hf-pill ip-ml">ML</span>
-        <span class="hf-pill ip-dl">Deep Learning</span>
         <span class="hf-pill ip-gen">Gen AI</span>
         <span class="hf-pill ip-dl">NLP</span>
         <span class="hf-pill ip-ml">EDA</span>
@@ -404,15 +427,17 @@
     <div class="rvl">
       <div class="about-bio">
         <p>
-          Third-year B.Tech Computer Engineering student at <em>CHARUSAT</em> with hands-on experience in <strong>AI-integrated web apps, deep learning, and open-source contribution</strong>. Built production AI systems using Python, PyTorch, Flask, and NLP — from REST APIs to hybrid deep learning architectures. Active GSSoC 2026 contributor and hackathon participant.
+          Third-year B.Tech Computer Engineering student at <em>CHARUSAT</em> working across <strong>research and software development</strong>. First author of three medical-imaging research works spanning hybrid CNN, graph, state-space and transformer architectures, supervised by Prof. Ronak R. Patel. Built production AI systems using Python, PyTorch, Flask, and NLP — from REST APIs to hybrid deep learning architectures. Active GSSoC 2026 contributor and hackathon participant.
         </p>
       </div>
       <div class="about-tags">
         <span class="about-tag">Python</span>
         <span class="about-tag">PyTorch</span>
         <span class="about-tag">Flask</span>
+        <span class="about-tag">Medical Imaging</span>
         <span class="about-tag">ResNet-50</span>
         <span class="about-tag">GraphSAGE</span>
+        <span class="about-tag">DINOv2 · LoRA</span>
         <span class="about-tag">NLP</span>
         <span class="about-tag">REST APIs</span>
         <span class="about-tag">PostgreSQL</span>
@@ -426,8 +451,12 @@
         <div class="snap-value teal">B.Tech CE · CHARUSAT</div>
       </div>
       <div class="snap-card">
-        <div class="snap-label">Internship</div>
-        <div class="snap-value orange">AI @ LaunchED Global</div>
+        <div class="snap-label">Research</div>
+        <div class="snap-value orange">3 First-Author Papers</div>
+      </div>
+      <div class="snap-card">
+        <div class="snap-label">CGPA</div>
+        <div class="snap-value blue">7.96 / 10</div>
       </div>
       <div class="snap-card">
         <div class="snap-label">Certifications</div>
@@ -445,7 +474,68 @@
         <div class="snap-label">Hackathon</div>
         <div class="snap-value orange">14th / 188 Teams</div>
       </div>
+      <div class="snap-card">
+        <div class="snap-label">Conference</div>
+        <div class="snap-value teal">ICST 2026 · IIT Patna</div>
+      </div>
     </div>
+  </div>
+</section>
+
+<!-- RESEARCH & PUBLICATIONS (new) -->
+<section id="research">
+  <h2 class="sec-h rv">Research & <span>Publications</span></h2>
+  <p class="res-intro rv">
+    <strong>Undergraduate researcher</strong> working on deep learning for medical image analysis under the supervision of Prof. Ronak R. Patel (CSPIT, CHARUSAT). First author of three research works spanning histopathology, dermoscopic skin lesion analysis and brain MRI classification — one accepted and presented, one submitted and one under revision. Research interests: medical image analysis, image classification and image segmentation.
+  </p>
+  <div class="proj-grid rv">
+
+    <div class="pj">
+      <div class="pj-head">
+        <span class="pj-label research">🔬 Histopathology</span>
+        <span class="st acc">Accepted & Presented · DOI Awaited</span>
+      </div>
+      <div class="pj-title res-title">HGC-Net: Hybrid CNN-GraphSAGE-CBAM Framework for Atypical Mitosis Classification in Histopathology Images</div>
+      <div class="pj-meta"><strong>First author</strong> · Co-author: Prof. Ronak R. Patel<br/>ICST 2026, IIT Patna (1–2 Aug 2026)</div>
+      <div class="pj-metric">✦ 94.89% Accuracy · 90.29% Recall · AUC-ROC 0.982</div>
+      <p class="pj-desc">ResNet-50 encoder, a three-layer GraphSAGE network over a cosine-similarity kNN patch graph, and CBAM-1D channel attention. Evaluated on MIDOG 2025 (11,939 patches, multi-scanner); addressed 5.8:1 class imbalance with minority-class augmentation and Focal Loss.</p>
+      <div class="pj-stack"><span class="pj-s">PyTorch</span><span class="pj-s">ResNet-50</span><span class="pj-s">GraphSAGE</span><span class="pj-s">CBAM</span><span class="pj-s">Focal Loss</span><span class="pj-s">MIDOG 2025</span></div>
+      <div class="pj-links">
+        <a href="https://github.com/Vaibhavi-1107/Mitosis_Research" target="_blank">GitHub →</a>
+        <a href="https://hgc-net-explorer.vercel.app/" target="_blank">Live Demo →</a>
+      </div>
+    </div>
+
+    <div class="pj">
+      <div class="pj-head">
+        <span class="pj-label research">🔬 Dermoscopy</span>
+        <span class="st rev">Under Revision</span>
+      </div>
+      <div class="pj-title res-title">CMQ-Net: A Hybrid CNN–MedMamba Network with Quantum-Inspired Channel Attention and Adaptive Feature Fusion for Dermoscopic Skin Lesion Classification</div>
+      <div class="pj-meta"><strong>First author</strong> · Corresponding author: Prof. Ronak R. Patel<br/>BMC Medical Imaging (Q1, JIF: 3.9)</div>
+      <div class="pj-metric">✦ 98.34% Accuracy · 98.31% F1 · 99.92% Macro-AUC · 1.86M params</div>
+      <p class="pj-desc">Three-stream model: a CNN backbone for local texture, a MedMamba state-space block for long-range context and quantum-inspired channel attention, joined by gated feature fusion. Evaluated on HAM10000 (7 classes, class-balanced split) with ablations, Grad-CAM and Integrated Gradients.</p>
+      <div class="pj-stack"><span class="pj-s">TensorFlow / Keras</span><span class="pj-s">MedMamba</span><span class="pj-s">State-Space Models</span><span class="pj-s">Quantum-Inspired Attention</span><span class="pj-s">Grad-CAM</span><span class="pj-s">HAM10000</span></div>
+      <div class="pj-links">
+        <span class="soon">Manuscript under revision</span>
+      </div>
+    </div>
+
+    <div class="pj">
+      <div class="pj-head">
+        <span class="pj-label research">🔬 Brain MRI</span>
+        <span class="st sub">Submitted</span>
+      </div>
+      <div class="pj-title res-title">QGAN-DINOv2: A Quantum-Augmented Vision Transformer Framework for Brain Tumor MRI Classification</div>
+      <div class="pj-meta"><strong>First author</strong> · Corresponding author: Prof. Ronak R. Patel<br/>Signal, Image and Video Processing (Q3, JIF: 2.7)</div>
+      <div class="pj-metric">✦ 95.19% Accuracy · 95.10% Macro-F1</div>
+      <p class="pj-desc">Quantum-classical GAN for class-preserving MRI augmentation, a frozen DINOv2-Base backbone adapted with LoRA (rank 8) on query/value projections, and learnable cross-attention fusion of CLS tokens from four transformer depths. Four-class brain tumour benchmark, updating fewer than 4% of backbone parameters.</p>
+      <div class="pj-stack"><span class="pj-s">PyTorch</span><span class="pj-s">DINOv2</span><span class="pj-s">LoRA</span><span class="pj-s">QGAN</span><span class="pj-s">Cross-Attention</span><span class="pj-s">Vision Transformer</span></div>
+      <div class="pj-links">
+        <span class="soon">Manuscript submitted</span>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -453,6 +543,22 @@
 <section id="experience">
   <h2 class="sec-h rv">Work & <span>Experience</span></h2>
   <div class="exp-timeline">
+
+    <div class="exp-item rv">
+      <div class="exp-date"><strong>11 May – 25 Jun 2026</strong>CSPIT, CHARUSAT</div>
+      <div>
+        <span class="exp-badge res">◆ Research Internship</span>
+        <div class="exp-title">Summer Research Intern</div>
+        <div class="exp-org">CSPIT, CHARUSAT · Supervisor: Prof. Ronak R. Patel</div>
+        <ul class="exp-list">
+          <li>Conducted research on <strong>atypical mitosis classification</strong> in histopathology images and prepared the project report and presentation</li>
+          <li>Related paper: <strong>HGC-Net</strong>, accepted and presented at ICST 2026, IIT Patna</li>
+        </ul>
+        <div class="exp-chips">
+          <span class="echip">Medical Imaging</span><span class="echip">Histopathology</span><span class="echip">PyTorch</span><span class="echip">Graph Neural Networks</span>
+        </div>
+      </div>
+    </div>
 
     <div class="exp-item rv">
       <div class="exp-date"><strong>May – Aug 2026</strong>Remote</div>
@@ -530,9 +636,10 @@
 <section id="skills">
   <h2 class="sec-h rv">Skills & <span>Domains</span></h2>
   <div class="skills-cols rv">
+    <div class="sk-domain"><div class="sk-d-icon">🔬</div><div class="sk-d-title">Medical Imaging & Research</div><div class="sk-d-sub">Hybrid deep-learning architectures for histopathology, dermoscopy and brain MRI.</div><div class="chips"><span class="chip">Medical Image Analysis</span><span class="chip">Computer Vision</span><span class="chip">GNN</span><span class="chip">ViT</span><span class="chip">LoRA</span><span class="chip">State-Space Models</span><span class="chip">Feature Fusion</span><span class="chip">Grad-CAM</span><span class="chip">Integrated Gradients</span></div></div>
     <div class="sk-domain"><div class="sk-d-icon">🧠</div><div class="sk-d-title">AI / Machine Learning</div><div class="sk-d-sub">Building and evaluating intelligent models on real datasets.</div><div class="chips"><span class="chip">Scikit-learn</span><span class="chip">Regression</span><span class="chip">Classification</span><span class="chip">Clustering</span><span class="chip">Model Eval</span></div></div>
     <div class="sk-domain"><div class="sk-d-icon">✨</div><div class="sk-d-title">Generative AI</div><div class="sk-d-sub">LLMs, AI agents, prompt engineering and Gen AI apps.</div><div class="chips"><span class="chip">LLMs</span><span class="chip">AI Agents</span><span class="chip">Prompt Engineering</span><span class="chip learn">RAG ↗</span><span class="chip learn">LangChain ↗</span></div></div>
-    <div class="sk-domain"><div class="sk-d-icon">💬</div><div class="sk-d-title">NLP & Deep Learning</div><div class="sk-d-sub">Text summarization, neural networks and medical imaging research.</div><div class="chips"><span class="chip">NLTK</span><span class="chip">Text Summarization</span><span class="chip">CNN</span><span class="chip">GNN</span><span class="chip learn">TensorFlow ↗</span><span class="chip">PyTorch</span></div></div>
+    <div class="sk-domain"><div class="sk-d-icon">💬</div><div class="sk-d-title">NLP & Deep Learning</div><div class="sk-d-sub">Text summarization, neural networks and medical imaging research.</div><div class="chips"><span class="chip">NLTK</span><span class="chip">Text Summarization</span><span class="chip">CNN</span><span class="chip">GNN</span><span class="chip">TensorFlow</span><span class="chip">PyTorch</span></div></div>
     <div class="sk-domain"><div class="sk-d-icon">📊</div><div class="sk-d-title">Data Science</div><div class="sk-d-sub">EDA, data wrangling and visualization for real insights.</div><div class="chips"><span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">Matplotlib</span><span class="chip">Seaborn</span><span class="chip">Statistics</span></div></div>
     <div class="sk-domain"><div class="sk-d-icon">🌐</div><div class="sk-d-title">Backend & Web</div><div class="sk-d-sub">Deploying AI models into functional web applications.</div><div class="chips"><span class="chip">Flask</span><span class="chip">Node.js</span><span class="chip">Express.js</span><span class="chip">Python</span><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span></div></div>
     <div class="sk-domain"><div class="sk-d-icon">⚡</div><div class="sk-d-title">Programming & DSA</div><div class="sk-d-sub">Strong algorithmic foundation — 200+ problems solved.</div><div class="chips"><span class="chip">C++</span><span class="chip">C</span><span class="chip">Java</span><span class="chip">Python</span><span class="chip">Arrays</span><span class="chip">Linked Lists</span><span class="chip">Sorting</span><span class="chip">Recursion</span></div></div>
@@ -572,12 +679,13 @@
     <div class="pj">
       <span class="pj-label research">🔬 Research · Medical AI</span>
       <div class="pj-title">HGC-Net: Hybrid CNN-GraphSAGE-CBAM</div>
-      <div class="pj-metric">✦ 94.89% Accuracy · AUC 0.982 · Paper Under Review</div>
+      <div class="pj-metric">✦ 94.89% Accuracy · AUC 0.982 · Accepted & Presented · ICST 2026</div>
       <p class="pj-desc">3-stage hybrid system for histopathology classification on the MIDOG 2025 dataset (11,939 patches). ResNet-50 extracts patch-level features, a k-NN GraphSAGE GNN models relational context across tissue regions, and CBAM-1D channel attention refines the representation before classification. Addressed 5.8:1 class imbalance via Focal Loss and targeted augmentation.</p>
       <div class="pj-stack"><span class="pj-s">Python</span><span class="pj-s">PyTorch</span><span class="pj-s">ResNet-50</span><span class="pj-s">GraphSAGE</span><span class="pj-s">CBAM</span><span class="pj-s">Focal Loss</span></div>
       <div class="pj-links">
         <a href="https://github.com/Vaibhavi-1107/Mitosis_Research" target="_blank">GitHub →</a>
-        <span class="soon">Paper Under Review</span>
+        <a href="https://hgc-net-explorer.vercel.app/" target="_blank">Live Demo →</a>
+        <span class="soon">DOI awaited</span>
       </div>
     </div>
 
@@ -613,6 +721,7 @@
   <div class="rv">
     <div class="cert-tabs">
       <button class="cert-tab active" onclick="switchTab('courses', event)">📚 Courses</button>
+      <button class="cert-tab" onclick="switchTab('research', event)">🔬 Research</button>
       <button class="cert-tab" onclick="switchTab('workshops', event)">🛠 Workshops</button>
       <button class="cert-tab" onclick="switchTab('hackathons', event)">⚡ Hackathons</button>
     </div>
@@ -620,6 +729,9 @@
     <!-- Courses -->
     <div class="cert-panel active" id="tab-courses">
       <div class="cert-grid">
+        <div class="cert-card"><div class="cert-dot dot-coursera"></div><div class="cert-info"><div class="cert-name">Microsoft Power BI Data Analyst Professional Certificate</div><div class="cert-by">Coursera</div><div class="cert-when">21 Oct 2026</div></div></div>
+        <div class="cert-card"><div class="cert-dot dot-orange"></div><div class="cert-info"><div class="cert-name">NPTEL — Theory of Computation</div><div class="cert-by">IIT Madras via SWAYAM · 77% · 3 Credits</div><div class="cert-when">Jul – Sep 2026</div></div></div>
+        <div class="cert-card"><div class="cert-dot dot-ibm"></div><div class="cert-info"><div class="cert-name">IBM SkillsBuild — AI Fundamentals: Language and Vision in AI</div><div class="cert-by">IBM SkillsBuild</div><div class="cert-when">27 Jul 2026</div></div></div>
         <div class="cert-card"><div class="cert-dot dot-ibm"></div><div class="cert-info"><div class="cert-name">IBM SkillsBuild — AI Fundamentals</div><div class="cert-by">IBM SkillsBuild</div><div class="cert-when">Jun 2026</div></div></div>
         <div class="cert-card"><div class="cert-dot dot-orange"></div><div class="cert-info"><div class="cert-name">NPTEL Elite — Design and Analysis of Algorithms</div><div class="cert-by">IIT Madras via SWAYAM · 66% · 3 Credits</div><div class="cert-when">Jan – Mar 2026</div></div></div>
         <div class="cert-card"><div class="cert-dot dot-ibm"></div><div class="cert-info"><div class="cert-name">Data Analysis with Python</div><div class="cert-by">IBM via Coursera</div><div class="cert-when">Feb 2026</div></div></div>
@@ -631,9 +743,18 @@
       </div>
     </div>
 
+    <!-- Research -->
+    <div class="cert-panel" id="tab-research">
+      <div class="cert-grid">
+        <div class="cert-card"><div class="cert-dot dot-orange"></div><div class="cert-info"><div class="cert-name">ICST 2026 — Certificate of Presentation (HGC-Net)</div><div class="cert-by">IIT Patna · SCRS/ICST 2026/PC/717</div><div class="cert-when">1–2 Aug 2026</div></div></div>
+        <div class="cert-card"><div class="cert-dot dot-purple"></div><div class="cert-info"><div class="cert-name">Summer Internship Completion — Atypical Mitosis Classification</div><div class="cert-by">CSPIT, CHARUSAT · Prof. Ronak R. Patel</div><div class="cert-when">11 May – 25 Jun 2026</div></div></div>
+      </div>
+    </div>
+
     <!-- Workshops -->
     <div class="cert-panel" id="tab-workshops">
       <div class="cert-grid">
+        <div class="cert-card"><div class="cert-dot dot-ibm"></div><div class="cert-info"><div class="cert-name">Qiskit Fall Fest 2026</div><div class="cert-by">IBM Quantum</div><div class="cert-when">25 Oct 2026</div></div></div>
         <div class="cert-card"><div class="cert-dot dot-purple"></div><div class="cert-info"><div class="cert-name">AI Introductory Workshop</div><div class="cert-by">CHARUSAT</div><div class="cert-when">Sep 1, 2025</div></div></div>
         <div class="cert-card"><div class="cert-dot dot-ibm"></div><div class="cert-info"><div class="cert-name">LLM Workshop</div><div class="cert-by">CHARUSAT</div><div class="cert-when">2025</div></div></div>
         <div class="cert-card"><div class="cert-dot dot-orange"></div><div class="cert-info"><div class="cert-name">Text Mining Workshop</div><div class="cert-by">CHARUSAT</div><div class="cert-when">2025</div></div></div>
@@ -707,7 +828,7 @@
     <div class="rvl">
       <div class="contact-info">
         <h3>Open to Opportunities</h3>
-        <p>Looking for internships in Data Science, ML, AI or backend development. Also open to research collaborations and project partnerships. Always happy to connect!</p>
+        <p>Looking for research internships in AI, ML and medical image analysis, as well as internships in Data Science, ML, AI or backend development. Also open to research collaborations and project partnerships. Always happy to connect!</p>
       </div>
       <div class="c-items">
         <a class="c-item" href="mailto:kariavaibhavi@gmail.com"><span class="ci-icon">✉️</span><div><div class="ci-label">Email</div><div class="ci-val">kariavaibhavi@gmail.com</div></div><span class="ci-arr">→</span></a>
